@@ -1,0 +1,86 @@
+:root {
+    --dark: #000;
+    --grey: #efefef;
+
+}
+
+body {
+    margin: 0;
+}
+
+.bg-light { background-color: var(--dark) !important; }
+.bg-grey { background-color: var(--grey) !important}
+
+.lead { font-size: 1.4rem !important; }
+
+.hero { 
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.content { 
+    z-index:9999; 
+    height: 700px; 
+    padding: 0 2rem !important;
+}
+
+.navbar .navbar-toggler-icon {
+  background-color: white;
+}
+
+.infinite-scroll:before {
+    content: '';
+    -webkit-animation: bg-image 6s linear infinite;
+    animation: bg-image 6s linear infinite;
+    background: url('/assets/img/total.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+  
+.infinite-scroll:after {
+    content: '';
+    -webkit-animation: bg-image2 6s  linear infinite;
+    animation: bg-image2 6s linear infinite;
+    background: url('/assets/img/total.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+@-webkit-keyframes bg-image {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+}
+@-webkit-keyframes bg-image2 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}
+
+@media (max-width: 991.98px) { 
+  .navbar {
+    position:  relative !important;
+  }
+  .content {
+    display: block !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content {
+    padding: 0 !important;
+  }
+  h1 {
+    font-size: 2.4rem !important;
+  }
+}

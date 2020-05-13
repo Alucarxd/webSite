@@ -1,0 +1,223 @@
+/*Fuentes:
+font-family: 'Nunito', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Bree Serif', serif;
+*/
+/*Cadena cdn de la fuente de google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Noto+Serif|Nunito|Prompt&display=swap');
+
+/*fuente que coloque*/
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(180deg, #6e45e2 0%, #88d3ce 100%);
+} 
+:root {
+    --dark: #0a0a0a;
+    --grey: #f6f6f6;
+    --light: #ffffff;
+}
+
+html {
+    height: 100%;
+   /* font-family: 'Spartan', sans-serif;*/
+    font-weight: 300;
+}
+
+.navbar {
+    min-height: 1rem;
+}
+
+.bg-light { background-color: var(--light) !important; }
+.bg-dark { background-color: var(--dark) !important; }
+.bg-grey { background-color: var(--grey) !important; }
+
+.border-right, .border-top { border-color: rgba(256, 256, 256, .2) !important;}
+
+.text-dark { color: var(--dark) !important;}
+
+.text-ligth{ color: var(--ligth) !important;}
+
+
+.py-6 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.btn {
+    padding: .75rem 1rem;
+    border-radius: .1rem;
+    font-weight: 700;
+}
+
+.btn-dark {
+    background-color: var(--dark);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--dark) ;
+}
+
+.badge {
+    padding: .5rem 1rem;
+}
+.badge-secondary {
+    background-color: var(--grey);
+    color: var(--dark);
+}
+
+.menu {
+    height: 100vh;
+}
+
+div.mapa { 
+    height: 428px;
+    
+}
+
+
+#menu-overlay {
+    height: 100vh;
+    top: 0;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+#menu-content {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+#close {
+    display: none;
+}
+
+#open-icon {
+    transition: 1s ease-in-out;
+}
+
+#close-icon {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.z-index-top {
+    z-index: 1010;
+}
+
+#content {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+section {
+    min-height: 100vh;
+}
+
+/*-__________________Estilos que aplique_________________*/
+.enlace-front{
+    font-size:30px !important; 
+    color:#0026ff !important;
+}
+
+.enlace-front:hover{
+    font-size:30px !important; 
+    color:#eeeeee !important;
+    text-decoration: none;
+}
+
+.bg-img{
+    background-image: url('../img/backrground1.png') ;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-img2{
+    background-image: url('../img/background7.jpg') ;
+    width: 100%;
+    background-size: cover;
+    position:relative ;
+}
+.cap-transp::before{
+    content: "";
+    width: 100%;
+    height:100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    opacity: 0.8;
+}
+
+.title {
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.nosotros-titulo{
+    font-size: 30px !important;
+}
+.nosotros-contenido{
+    font-size: 20px !important;
+}
+
+/*iconos de las redes sociales de los miebros del team*/
+.social-network{
+    color:black;
+    font-size: 30px;
+    margin:10px 15px;
+    padding: 0px;
+    text-decoration: none;
+}
+.social-network:hover{
+    color:#0026ff ;
+    text-decoration: none;
+}
+
+/*tamaño de las fotografias del team*/
+.m-team{
+    height: 480px;
+}
+
+/*_______________________________________________*/
+
+@media (max-width: 1200px) { 
+    .hero {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width:768px) {
+    .modal-dialog {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 991px) { 
+    .menu {
+        max-height: 80px;
+    }
+    footer {
+        text-align: center;
+    }
+    .footer .text-right {
+        text-align: unset !important;
+    }
+}
+
+@media (max-width: 576px) { 
+    .display-3, .display-4 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+  .card-infomacion{
+    height:500px;
+  }
+}

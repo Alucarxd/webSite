@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en" >
+
+<head>
+  <!-- Meta etiquetas  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="author" content="colored hat & Riki Maru">
+
+  <!-- Ionic icons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Spartan:300,700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Mapa Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+
+  <!-- Estilo JS SCROLL-->
+  <script src="assets/js/smooth-scroll.js"></script>
+  <script>
+    smoothScroll.init({
+      selector: '[data-scroll]',
+
+      selectorHeader: null,
+
+      speed: 500,
+
+      easing: 'easeInOutCubic',
+
+      offset: 0,
+      
+      callback: function (anchor, toggle) {}
+    });
+  </script>
+
+  <!-- EFECTO -->
+<script>
+  function showMenu() {
+    document.getElementById('content').style.overflowY = "hidden";
+    document.getElementById('open-icon').style.opacity = "0";
+    document.getElementById('menu-overlay').style.cssText = "opacity: 1; z-index: 1005;";
+    setTimeout(function () {
+      document.getElementById('open').style.display = "none";
+      document.getElementById('close').style.display = "block";
+      document.getElementById('menu-content').style.opacity = "1";
+    }, 1000);
+    setTimeout(function () {
+      document.getElementById('close-icon').style.opacity = "1";
+    }, 1100);
+  }
+
+  function hideMenu() {
+    document.getElementById('content').style.overflowY = "auto";
+    document.getElementById('close-icon').style.opacity = "0";
+    document.getElementById('menu-content').style.opacity = "0";
+    setTimeout(function () {
+      document.getElementById('close').style.display = "none";
+      document.getElementById('open').style.display = "block";
+      document.getElementById('menu-overlay').style.cssText = "opacity: 0; z-index: unset;";
+    }, 1000);
+    setTimeout(function () {
+      document.getElementById('open-icon').style.opacity = "1";
+    }, 1100);
+  }
+</script>
+<!-- end efecto-->
+
+  <!--Scroll reveal-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!--Logo de pestaña de navegador-->
+  <link rel="icon" type="image/png" href="./assets/img/navbar-browcer-ico.svg" />
+  
+  <title>Colored Hat</title>
+</head>
+<!-- efecto -->
+<body class="position-relative" onload="showMenu()">
+  <div class="row no-gutters">
+    <div class="col-lg-1 menu d-flex z-index-top">
+      <div class="align-self-center mx-auto">
+        <div id="open">
+          <a href="#" id="open-icon"><i class="icon ion-md-menu display-4 text-light mx-auto"
+              onclick="showMenu()"></i></a>
+        </div>
+        <div id="close">
+          <a href="#" id="close-icon"><i class="icon ion-md-close display-4 text-light mx-auto"
+              onclick="hideMenu()"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- end fin efecto close -->
+    <div id="content" class="col-lg-11">
+      <!-- Navegador -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
+        <a class="navbar-brand" href="#">Colored Hat</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a   data-scroll href="#nosotros" class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="./subIndex/portafolio.html" class="nav-link">Portafolio</a>
+            </li>
+            <li class="nav-item ">
+              <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información." class="nav-link font-weight-bold text-grey">Contáctanos ahora</a>
+
+            </li>
+          </ul>
+        </div>
+      </nav> <!-- end Navegador -->
+      <!-- header -->
+      <section class="py-6">
+        <div class="container">
+          <div class="text-center w-75 mx-auto mb-5">
+            <h1 class="display-4 mb-3">Somos desarrolladores freelancer en <span class="font-weight-bold"> creación de contenido web </span></h1>
+            <p class="lead text-muted mb-5 text-dark">Creamos tu WEB con las mejores y mas recientes tecnologías</p>
+            <a href="./subIndex/portafolio.html" class="btn btn-outline-dark mr-2 mb-4">Portafolio</a>
+            <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-outline-dark mb-4">Contáctanos ahora</a>
+
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> Djando</small></li>
+              <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> Larabel</small></li>
+              <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> Bootstrap</small></li>
+              <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> WordPress</small></li>
+              <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> NodeJs</small></li>
+              <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> MongoDB</small></li>
+              <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> My SQL</small></li>
+              <li class="list-inline-item"><small><i class="icon ion-md-checkmark mr-1"></i> Wix</small></li>
+            </ul>
+            <a data-scroll href="#sec-1" class="text-light">
+              <i class="icon ion-ios-arrow-dropdown-circle lead mr-2">
+                lista de planes
+              </i>
+            </a>
+            <a data-scroll href="#sec-2" class="text-light">
+              <i class="icon ion-ios-arrow-dropdown-circle lead mr-2">
+                Contáctanos
+              </i>
+            </a>
+            <a data-scroll href="#mapa" class="text-light">
+              <i class="icon ion-ios-arrow-dropdown-circle lead mr-2">
+                Ubicación
+              </i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- end header -->
+ 
+      <!-- nosotros -->
+      <section class="bg-img py-5 bg-grey " id=nosotros>
+        <div class="">
+          <div class="container">
+            <h1 class=" text-center py-2 text-light display-4 nosotros-titulo">Sobre Nosotros</h1>
+            <p class=" lead mb-5 text-light display-6 text-center nosotros-contenido"> Colored hat nace con el firme propósito de ser líder local en                    la creación de sitio web y software de negocios a tu medida, si lo puedes soñar, nosotros lo hacemos realidad contamos con soporte                     los 365 dias del año.
+            </p>
+            <h1 class="text-center py-2 text-light display-4 ">Nuestros Servicios</h1>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="card text-center border-info ">
+                  <div class="card-body">
+                    <h3 class="text-uppercase">Desarrollo Web</h3>
+                    <p>Tus ideas se hacen realidad, con nuestro equipo dedicados al Desarrollo web</p>
+                    <br>
+                    <a href="mailto:colored_hat@outlook.com?subject=Desarrollo Web&body=Hola, te contacto desde tu Website quiero mas información."                             class="btn btn-info mr-2 mb-4">mas informacion</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card text-center bg-info text-left ">
+                  <div class="card-body">
+                    <h3 class="text-uppercase text-light">Desarrollo de software</h3>
+                    <p class="text-light">Si buscas un Software a tu medida a tus problemas, nosotros le daremos solucion. </p>
+                    <br>
+                    <a href="mailto:colored_hat@outlook.com?subject=Desarrollo de Software &body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-outline-light mr-2 mb-4">mas informacion</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card text-center border-info ">
+                  <div class="card-body">
+                    <h3 class="text-uppercase">Creación de contenido</h3>
+                    <p>Damos ideas inmodaras sobre la creacion de videos para tus plataformas favoritas.</p>
+                    <a href="mailto:colored_hat@outlook.com?subject=Creación de contenido &body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-info mr-2 mb-4">mas informacion</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card text-center bg-info text-left ">
+                  <div class="card-body">
+                    <h3 class="text-uppercase text-light">Proyectos Generales</h3>
+                    <p class="text-light">Realizamos tus proyectos ya sea (Colegio, Universidad o personales).</p>
+                    <br>
+                    <a href="mailto:colored_hat@outlook.com?subject=Proyectos generales &body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-outline-light mr-2 mb-4">mas informacion</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+       <!-- PRECIOS -->
+      <section class="py-5 " id=sec-1>
+        <div class="container">
+          <h2 class="mb-0 text-light font-weight-bold">Lista de planes</h2>
+          <p class="lead text-light mb-5">Planes diseñados a tu medida</p>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card border-0 rounded-3 bg-light my-3">
+                <div class="card-header bg-light border-0 p-4">
+                  <h5 class="mb-3">Personal</h5>
+                  <h2 class="display-4 font-weight-bold">$15</h2>
+                  <span class="badge badge-secondary">Mensual</span>
+                </div>
+                <div class="card-body p-4">
+                  <p class="font-weight-bold">Ideal para proyectos personales o educativos.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Sitio web responsivo</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Optimización</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Hosting ilimitado</small></li>
+                    <li class="mb-2 text-muted"><small><i class="icon ion-md-close mr-2"></i>Tienda en línea</small>
+                    </li>
+                    <li class="text-muted"><small><i class="icon ion-md-close mr-2"></i>Certificado de seguridad SSL</small></li>
+                  </ul>
+                </div>
+                <div class="card-footer bg-light border-0 p-4 text-center">
+                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 10$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
+                  <small class="text-muted">7 días de prueba gratis</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card border-0 rounded-3 bg-light my-3">
+                <div class="card-header bg-light border-0 p-4">
+                  <h5 class="mb-3">Agencias</h5>
+                  <h2 class="display-4 font-weight-bold">$30</h2>
+                  <span class="badge badge-secondary">Mensual</span>
+                </div>
+                <div class="card-body p-4">
+                  <p class="font-weight-bold">La mejor opción para equipos pequeños.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Sitio web responsivo</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Optimización</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Hosting ilimitado</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Tienda en línea</small></li>
+                    <li class="text-muted"><small><i class="icon ion-md-close mr-2"></i>Certificado de seguridad
+                        SSL</small></li>
+                  </ul>
+                </div>
+                <br>
+                <div class="card-footer bg-light border-0 p-4 text-center">
+                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 25$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
+
+                  <small class="text-muted">7 días de prueba gratis</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 ">
+              <div class="card border-0 rounded-3 bg-light my-3">
+                <div class="card-header bg-light border-0 p-4">
+                  <h5 class="mb-3">Empresas</h5>
+                  <h2 class="display-4 font-weight-bold">$45</h2>
+                  <span class="badge badge-secondary">Mensual</span>
+                </div>
+                <div class="card-body p-4">
+                  <p class="font-weight-bold">La solución perfecto para grandes empresas.</p>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Sitio web responsivo</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Optimización</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i> Hosting ilimitado</small></li>
+                    <li class="mb-2"><small><i class="icon ion-md-checkmark mr-2"></i>Tienda en línea</small></li>
+                    <li><small><i class="icon ion-md-checkmark mr-2"></i>Certificado de seguridad SSL</small></li>
+                  </ul>
+                </div>
+                <div class="card-footer bg-light border-0 p-4 text-center">
+                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 40$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
+
+                  <small class="text-muted">7 días de prueba gratis</small>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+      <!-- end Precios -->
+
+      <!-- Equipo -->
+      <section class="bg-img2 team text-center bg-grey">
+        <div class="conteiner p-5">
+          <h1 class="text-dark">Equipo</h1>
+          <h4 class="text-dark">Aqui presentamos a los integrantes de <span class="font-weight-bold text-dark">colored hat</span> un equipo selecto para la creacion de contenido web y desarrollo de software.</h4>
+          <br>
+          <div class="row">
+            <!-- mienbros-->
+           
+            <div class="col-lg-4">
+              <div class="card m-team">
+                <div class="card-body">
+                  <img src="assets/img/adrian2.jpg" class="img-fluid rounded-circle w-55" alt="mienbro_0">
+                  <h3>Adrian Villena</h3>
+                  <p>Diseño & Editor</p>
+                  <hr>
+                  <div class="d-flex flex-row justify-content-center">
+                    <div class="p-4">
+                  
+                      
+                        <a href="https://www.facebook.com/adrileow" target="blank" class="icon ion-logo-facebook p-2 social-network"></a>
+                      
+                        <a href="https://www.youtube.com/channel/UC_QeYnJHbzB23YQygoK2oSQ" target="blank" class="icon ion-logo-youtube social-network"></a>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card m-team">
+                <div class="card-body">
+                  <img src="assets/img/gabriel2.jpg" class="img-fluid rounded-circle w-55 img-cover" alt="mienbro_0">
+                  <h3>Gabriel Garcia</h3>
+                  <p>Desarrollador Web & Desktop</p>
+                  <hr>
+                  <div class="d-flex flex-row justify-content-center">
+                    <div class="p-4">
+                      
+                      <a href="https://www.facebook.com/coloredhat" target="blank" class="icon ion-logo-facebook social-network"></a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+
+            <div class="col-lg-4">
+              <div class="card m-team">
+                <div class="card-body">
+                  <img src="assets/img/richard2.jpg" class="img-fluid rounded-circle w-55" alt="mienbro_0">
+                  <h3>Richard Aguilar</h3>
+                  <p>Desarrollador Web</p>
+                  <hr>
+                  <div class="d-flex flex-row justify-content-center">
+                    <div class="p-4">
+                      
+                      <a href="https://github.com/RikimaruForever" target="blank" class="icon ion-logo-github social-network"></a>
+                      
+                      <a href="https://www.instagram.com/rikimaru1621/?hl=es-la" target="blank" class="icon ion-logo-instagram social-network"></a>
+                  
+                      <a href="https://www.linkedin.com/in/richard-aguilar-671bba19a/" target="blank" class="icon ion-logo-linkedin social-network"></a>
+              
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- end equipo-->
+
+      <!--¿Por que tener una web?_______________________Richard Aguilar, seccion que agrego___________________________________-->
+      <section class="m-auto">
+        <div class=".container mt-2 mb-4">
+          <h2 class="text-light p-3 text-center font-weight-bold">¿Por que tener una pagina web?</h2>
+      
+          <div class="row p-5">
+
+            <div class="col-md-6">
+              <div class="card text-center border-info card-infomacion" style="360px">
+                <div class="card-body">
+                  <img src="./assets/img/ceo.svg" alt="" style="width: 100px;">
+                  <hr>
+                  <h4 class="text-uppercase">Posicionarte en Google</h4>
+                  <p>Con una página web profesional tienes la posibilidad de posicionarte en los principales resultados de los buscadores como Google,Yahoo, etc que harán de tu marca personal tu principal identidad.</p>
+                
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="card text-center border-info card-infomacion" style="360px">
+                <div class="card-body">
+                  <img src="./assets/img/mercado.svg" alt="" style="width: 100px;">
+                  <hr>
+                  <h4 class="text-uppercase">Accede a nuevo público</h4>
+                  <p>Bill Gates dijo "Si tu negocio no esta en internet, tu negocio no existe". Al tener precencia en el mundo digital podras acceder a nuevos clientes en potencia que haran crecer tu negocio.</p>
+                    </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="card text-center border-info card-infomacion" style="360px">
+                <div class="card-body">
+                  <img src="./assets/img/servicio.svg" alt="" style="width: 100px;">
+                  <hr>
+                  <h4 class="text-uppercase">Presencia 24/7</h4>
+                  <p>Tu página será tu presencia 24/7 de tu marca. Ayudándote a vender y promocionar tus productos en automático.                                                                       </p>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card text-center border-info card-infomacion" style="360px">
+                <div class="card-body">
+                  <img src="./assets/img/cash2.png" alt="" style="width: 100px;">
+                  <hr>
+                  <h4 class="text-uppercase">Publicidad al mayor alcance y menor coste</h4>
+                  <p>Una página web es una manera de publicitarnos diariamente con un mínimo mantenimiento. Un anuncio permanente que puede contar diferentes cosas según lo vayamos adaptando a las necesidades cambiantes de nuestro público y que tiene un alcance mundial con un coste realmente bajo.</p>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin de mi seccion-->
+
+      <!-- AQUI VA EL MAPA DE LA OFFICINA V:-->
+
+      <div id="mapa" class="mapa"></div>
+      
+      <!-- end AQUI VA EL MAPA DE LA OFFICINA V:-->
+
+      <section class="bg-grey py-6" id="sec-2">
+        <div class="container">
+            <div class="w-75 mx-auto text-center">
+              <h2 class="mb-0">Es momento de empezar tu proyecto</h2>
+              <p class="lead text-muted mb-4">No pierdas la oportunidad de posicionar a tu marca.</p>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-4">
+                    <h6 class="font-weight-bold mb-0">Ubicacion de la oficina</h6>
+                    <small class="text-grey">Santo Domingo - Urbanicacion Arrollos</small>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-4">
+                    <h6 class="font-weight-bold mb-0">Teléfono de contacto</h6>
+                    <small class="text-grey">0992889078</small>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-4">
+                    <h6 class="font-weight-bold mb-0">Email de contacto</h6>
+                    <small class="text-grey">colored_hat@outlook.com</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    <!--Logotigo de tecnologias web-->
+         <div class="container">
+        <hr>
+          <div class="row text-center">
+            
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-html5.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-bootstrap-4.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-css-3.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-javascript-1.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-mysql-6.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-nodejs-icon.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-php.svg" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-python-5.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            <br>
+
+            <div class="col-3 col-sm-3 col-md-4 col-md-3">
+              <img src="./assets/img/logo-footer/logo-wordpress-blue.svg" alt="" class="" width="80px" height="80px">
+            </div>
+            
+         </div>
+       </div>
+<!--Fin logotigo de tecnologias web-->
+
+    </section>
+    
+      <!-- footer -->
+      <footer class="border-top py-4 sticky-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <small class="font-weight-bold text-dark">© 2021 <a class="font-weight-bold text-dark"
+                  target="_blank">Colored Hat</a></small>
+            </div>
+            <div class="col-lg-6 text-right">
+              <small><a
+                  href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información. "
+                  class="font-weight-bold text-dark">colored_hat@outlook.com</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+  </div>
+  <!-- contenido de efecto -->
+  <div id="menu-overlay" class="position-absolute d-flex h-100 bg-dark w-100">
+    <div id="menu-content" class="align-self-center w-75 mx-auto text-center">
+      <h1 class="display-3 text-light align-self-center">Hagamos tus ideas <span
+          class="font-weight-bold">realidad</span>.</h1>
+          <hr><hr>
+      <a class="stretched-link enlace-front"
+        href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información. ">colored_hat@outlook.com</a>
+
+    </div>
+  </div>
+  <!-- end  contenido de efecto -->
+
+  <!-- Mapa -->
+  <div class="container">
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  </div>
+
+  <!-- bootstrap 4 -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- end bootstrap 4 -->
+  
+  <!-- Código de instalación Cliengo para colored_hat@outlook.com --> <script type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/5ebb10a847aca7002802b50a/5ebb10a947aca7002802b50d.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>  
+
+  <!--Parametros de animacion scroll revele (cambie de opinion, no le pongo animaciones por que se ve feo-->
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal('.ani1',{
+      duration:1500,
+      origin:'top',
+      distance:'500px'
+    });
+
+    window.sr = ScrollReveal();
+    sr.reveal('.ani2',{
+      duration:1500,
+      origin:'left',
+      distance:'500px'
+    });
+    window.sr = ScrollReveal();
+    sr.reveal('.ani3',{
+      duration:1500,
+      origin:'right',
+      distance:'500px'
+    });
+     
+    window.sr = ScrollReveal();
+    sr.reveal('.ani4',{
+      duration:1500,
+      origin:'bottom',
+      distance:'500px'
+    });
+    
+  </script>
+  <!--Fin de scroll revel-->
+
+  <!-- CHAT -->
+</body>
+
+
+<!-- MAPA -->
+<script>
+var map = L.map('mapa').setView([-0.275215, -79.190547], 16);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([-0.275215, -79.190547]).addTo(map)
+    .bindPopup('Bienvenidos a <br> Colored Hat.')
+    .openPopup()
+    .bindTooltip('Te esperamos')
+    .openTooltip();
+
+  
+</script>
+</html>
