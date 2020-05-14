@@ -3,7 +3,7 @@ font-family: 'Nunito', sans-serif;
 font-family: 'Noto Serif', serif;
 font-family: 'Prompt', sans-serif;
 font-family: 'Bree Serif', serif;
-*/
+*/ 
 /*Cadena cdn de la fuente de google fonts*/
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Noto+Serif|Nunito|Prompt&display=swap');
 
@@ -182,6 +182,11 @@ section {
 /*tamaño de las fotografias del team*/
 .m-team{
     height: 480px;
+}
+
+/* Descuento de los precios anuales */
+.text-descuento{
+    background:  linear-gradient(-42deg,#ffc600, #e5ff00,#ffc600); 
 }
 
 /*_______________________________________________*/
