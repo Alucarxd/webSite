@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <meta name="author" content="colored hat & riki maru">
+  <meta name="author" content="BatCode & riki maru">
 
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 
   <!--Logo de pestaña de navegador-->
-  <link rel="icon" type="image/png" href="./assets/img/navbar-browcer-ico.svg" />
+  <link rel="icon" type="image/png" href="../assets/img/navbar-browcer-ico.svg" />
 
   <title>Portafolio</title>
 </head>
@@ -34,7 +34,7 @@
     </div>
     <div class="col-lg-6 col-md-12 content d-flex bg-light">
       <nav class="navbar navbar-expand-lg navbar-light bg-light position-absolute w-100 py-3">
-        <a class="navbar-brand font-weight-bold text-white">colored hat</a>
+        <a class="navbar-brand font-weight-bold text-white">BatCode</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,14 +45,47 @@
               <a class="nav-link text-white" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item mr-3">
-              <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información." class="nav-link text-white " href="#">Contacto</a>
+              <button type="button" class="btn bg-black text-light" data-toggle="modal" data-target="#exampleModal">
+                Contántanos 
+              </button>
+              
+              <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Formulario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+            <form method="post" name="contact" netlify>
+                <div class="field half first "><input type="text" name="name" placeholder="Nombre" style="width: 100%;"></div>
+                <div class="field half"><input type="number" name="number" placeholder="Celular" style="width: 100%;"></div>
+                <div class="field half"><input type="text" name="name" placeholder="Precio del plan (opcional)" style="width: 100%;"></div>
+                <div class="field"><textarea name="message" placeholder="Mensaje" rows="6" style="width: 100%;"></textarea></div>
+                <div class="modal-footer">
+                    <ul class="actions">
+                        <input class=" btn btn-primary" type="submit" value="Enviar">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- FINAL -->
             </li>
           </ul>
         </div>
       </nav>
       <div class="container align-self-center text-info">
       <h1 class="display-3 font-weight-bold mb-4">Experto en <br>Diseño Web</h1>
-        <p class="lead text-muted mb-5">Somos <span class="text-white">colored hat</span>, somos expertos en diseño páginas web innovadoras y en otras tecnologias</p>
+        <p class="lead text-muted mb-5">Somos <span class="text-white">BatCode</span>, somos expertos en diseño páginas web innovadoras y en otras tecnologias</p>
         <a href="http://bienes-raices.epizy.com/index.html" class="btn-neon" target="_blank">  
           <span id="span1"></span>
           <span id="span2"></span>

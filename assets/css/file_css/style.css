@@ -1,6 +1,7 @@
 :root {
     --dark: #000;
     --grey: #efefef;
+    --black: #000000;
 
 }
 
@@ -10,6 +11,7 @@ body {
 
 .bg-light { background-color: var(--dark) !important; }
 .bg-grey { background-color: var(--grey) !important}
+.bg-black { background-color: var(--black) !important;}
 
 .lead { font-size: 1.4rem !important; }
 

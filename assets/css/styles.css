@@ -11,7 +11,9 @@ font-family: 'Bree Serif', serif;
 *{
     font-family: 'Nunito', sans-serif;
 }
-
+.color {
+    background-color: #000000;
+}
 body {
     background-image: linear-gradient(180deg, #6e45e2 0%, #88d3ce 100%);
 } 

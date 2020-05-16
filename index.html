@@ -3,15 +3,15 @@
 
 <head>
   <!-- Meta etiquetas  -->
-  <title>Colored Hat</title>
+  <title>BatCode</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <meta name="description" content= "Colored hat nace con el firme propósito de ser líder local en la creación de sitio web y software de negocios a tu medida, si lo puedes soñar, nosotros lo hacem" />
+  <meta name="description" content= "BatCode nace con el firme propósito de ser líder local en la creación de sitio web y software de negocios a tu medida, si lo puedes soñar, nosotros lo hacem" />
   <meta name="robots" content= "index, follow">  <meta name="keywords" content="elaboracion de paginas web ,diseño de tienda online, desarrollo de paginas web, diseño paginas web"/>
   <meta http-equiv="cache-control" content="no-cache"/>
 
-  <meta name="author" content="colored hat & Riki Maru">
-  <meta name="copyright" content="colored hat"/>
+  <meta name="author" content="BatCode & Riki Maru">
+  <meta name="copyright" content="BatCode"/>
 
   <!-- Google verificacion -->
   <meta name="google-site-verification" content="XVGpoc0O-oVsJ9A3O8hKZVPyxvBWEb6C01UkbFakn_g" />
@@ -88,7 +88,7 @@
   <!--Logo de pestaña de navegador-->
   <link rel="icon" type="image/png" href="./assets/img/navbar-browcer-ico.svg" />
   
-  <title>Colored Hat</title>
+  <title>BatCode</title>
 </head>
 <!-- efecto -->
 <body class="position-relative" onload="showMenu()">
@@ -106,10 +106,40 @@
       </div>
     </div>
     <!-- end fin efecto close -->
+     <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Formulario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+            <form method="post" name="contact" netlify>
+                <div class="field half first "><input type="text" name="name" placeholder="Nombre" style="width: 100%;"></div>
+                <div class="field half"><input type="number" name="number" placeholder="Celular" style="width: 100%;"></div>
+                <div class="field half"><input type="text" name="name" placeholder="Precio del plan (opcional)" style="width: 100%;"></div>
+                <div class="field"><textarea name="message" placeholder="Mensaje" rows="6" style="width: 100%;"></textarea></div>
+                <div class="modal-footer">
+                    <ul class="actions">
+                        <input class=" btn btn-primary" type="submit" value="Enviar">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- FINAL -->
     <div id="content" class="col-lg-11">
       <!-- Navegador -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
-        <a class="navbar-brand" href="#">Colored Hat</a>
+        <a class="navbar-brand" href="#">BatCode</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -127,7 +157,9 @@
               <a href="./subIndex/portafolio.html" class="nav-link">Portafolio</a>
             </li>
             <li class="nav-item ">
-              <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información." class="nav-link font-weight-bold text-grey">Contáctanos ahora</a>
+              <button type="button" class="nav-link color font-weight-bold text-black" data-toggle="modal" data-target="#exampleModal">
+                Contántanos
+              </button>
 
             </li>
           </ul>
@@ -140,7 +172,9 @@
             <h1 class="display-4 mb-3">Somos desarrolladores freelancer en <span class="font-weight-bold"> creación de contenido web </span></h1>
             <p class="lead text-muted mb-5 text-dark">Creamos tu WEB con las mejores y mas recientes tecnologías</p>
             <a href="./subIndex/portafolio.html" class="btn btn-outline-dark mr-2 mb-4">Portafolio</a>
-            <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-outline-dark mb-4">Contáctanos ahora</a>
+            <button type="button" class="btn btn-outline-dark mb-4" data-toggle="modal" data-target="#exampleModal">
+              Contántanos ahora
+            </button>
 
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item mr-3"><small><i class="icon ion-md-checkmark mr-1"></i> Djando</small></li>
@@ -177,7 +211,7 @@
         <div class="">
           <div class="container">
             <h1 class=" text-center py-2 text-light display-4 nosotros-titulo">Sobre Nosotros</h1>
-            <p class=" lead mb-5 text-light display-6 text-center nosotros-contenido"> Colored hat nace con el firme propósito de ser líder local en                    la creación de sitio web y software de negocios a tu medida, si lo puedes soñar, nosotros lo hacemos realidad contamos con soporte                     los 365 dias del año.
+            <p class=" lead mb-5 text-light display-6 text-center nosotros-contenido"> BatCode nace con el firme propósito de ser líder local en                    la creación de sitio web y software de negocios a tu medida, si lo puedes soñar, nosotros lo hacemos realidad contamos con soporte                     los 365 dias del año.
             </p>
             <h1 class="text-center py-2 text-light display-4 ">Nuestros Servicios</h1>
             <div class="row">
@@ -187,8 +221,9 @@
                     <h3 class="text-uppercase">Desarrollo Web</h3>
                     <p>Tus ideas se hacen realidad, con nuestro equipo dedicados al Desarrollo web</p>
                     <br>
-                    <a href="mailto:colored_hat@outlook.com?subject=Desarrollo Web&body=Hola, te contacto desde tu Website quiero mas información."                             class="btn btn-info mr-2 mb-4">mas informacion</a>
-                  </div>
+                    <button type="button" class="btn btn-info mr-2 mb-4" data-toggle="modal" data-target="#exampleModal">
+                      mas informacion<i class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                    </button>                  </div>
                 </div>
               </div>
               <div class="col-md-3">
@@ -197,8 +232,10 @@
                     <h3 class="text-uppercase text-light">Desarrollo de software</h3>
                     <p class="text-light">Si buscas un Software a tu medida a tus problemas, nosotros le daremos solucion. </p>
                     <br>
-                    <a href="mailto:colored_hat@outlook.com?subject=Desarrollo de Software &body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-outline-light mr-2 mb-4">mas informacion</a>
-                  </div>
+                    
+                    <button type="button" class="btn btn-outline-light mr-2 mb-4" data-toggle="modal" data-target="#exampleModal">
+                      mas informacion<i class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                    </button>                  </div>
                 </div>
               </div>
               <div class="col-md-3">
@@ -206,8 +243,9 @@
                   <div class="card-body">
                     <h3 class="text-uppercase">Creación de contenido</h3>
                     <p>Damos ideas inmodaras sobre la creacion de videos para tus plataformas favoritas.</p>
-                    <a href="mailto:colored_hat@outlook.com?subject=Creación de contenido &body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-info mr-2 mb-4">mas informacion</a>
-                  </div>
+                    <button type="button" class="btn btn-info mr-2 mb-4" data-toggle="modal" data-target="#exampleModal">
+                      mas informacion<i class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                    </button>                    </div>
                 </div>
               </div>
               <div class="col-md-3">
@@ -216,7 +254,10 @@
                     <h3 class="text-uppercase text-light">Proyectos Generales</h3>
                     <p class="text-light">Realizamos tus proyectos ya sea (Colegio, Universidad o personales).</p>
                     <br>
-                    <a href="mailto:colored_hat@outlook.com?subject=Proyectos generales &body=Hola, te contacto desde tu Website quiero mas información." class="btn btn-outline-light mr-2 mb-4">mas informacion</a>
+
+                    <button type="button" class="btn btn-outline-light mr-2 mb-4" data-toggle="modal" data-target="#exampleModal">
+                      mas informacion<i class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -252,10 +293,9 @@
                     <li class="text-muted"><small><i class="icon ion-md-close mr-2"></i>Certificado de seguridad SSL</small></li>
                   </ul>
                 </div>
-                <div class="card-footer bg-light border-0 p-4 text-center">
-                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 10$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
-                  <small class="text-muted">7 días de prueba gratis</small>
-                </div>
+                <button type="button" class="btn btn-dark d-block mb-3" data-toggle="modal" data-target="#exampleModal">
+                  Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                </button>
               </div>
             </div>
             <div class="col-lg-4">
@@ -277,11 +317,10 @@
                   </ul>
                 </div>
                 <br>
-                <div class="card-footer bg-light border-0 p-4 text-center">
-                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 25$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
-
-                  <small class="text-muted">7 días de prueba gratis</small>
-                </div>
+                <button type="button" class="btn btn-dark d-block mb-3" data-toggle="modal" data-target="#exampleModal">
+                  Comienza ahora<i
+                  class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                </button>
               </div>
             </div>
             <div class="col-lg-4 ">
@@ -301,11 +340,10 @@
                     <li><small><i class="icon ion-md-checkmark mr-2"></i>Certificado de seguridad SSL</small></li>
                   </ul>
                 </div>
-                <div class="card-footer bg-light border-0 p-4 text-center">
-                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 40$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
-
-                  <small class="text-muted">7 días de prueba gratis</small>
-                </div>
+                <button type="button" class="btn btn-dark d-block mb-3" data-toggle="modal" data-target="#exampleModal">
+                  Comienza ahora<i
+                  class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -331,10 +369,11 @@
                     <li class="text-muted"><small><i class="icon ion-md-close mr-2"></i>Certificado de seguridad SSL</small></li>
                   </ul>
                 </div>
-                <div class="card-footer bg-light border-0 p-4 text-center">
-                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 10$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
-               
-                </div>
+                
+                <button type="button" class="btn btn-dark d-block mb-3" data-toggle="modal" data-target="#exampleModal">
+                  Comienza ahora<i
+                  class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                </button>
               </div>
             </div>
             <div class="col-lg-4">
@@ -357,9 +396,10 @@
                   </ul>
                 </div>
                 <br>
-                <div class="card-footer bg-light border-0 p-4 text-center">
-                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 25$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
-                </div>
+                <button type="button" class="btn btn-dark d-block mb-3" data-toggle="modal" data-target="#exampleModal">
+                  Comienza ahora<i
+                  class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                </button>
               </div>
             </div>
             <div class="col-lg-4 ">
@@ -381,9 +421,10 @@
                     <li><small><i class="icon ion-md-checkmark mr-2"></i>Certificado de seguridad SSL</small></li>
                   </ul>
                 </div>
-                <div class="card-footer bg-light border-0 p-4 text-center">
-                  <a href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información sobre el plan de 40$ " class="btn btn-dark d-block mb-3" >Comienza ahora<i class="icon ion-md-arrow-forward align-middle ml-2"></i></a>
-                </div>
+                <button type="button" class="btn btn-dark d-block mb-3" data-toggle="modal" data-target="#exampleModal">
+                  Comienza ahora<i
+                  class="icon ion-md-arrow-forward align-middle ml-2"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -397,7 +438,7 @@
       <section class="bg-img2 team text-center bg-grey">
         <div class="conteiner p-5">
           <h1 class="text-dark">Equipo</h1>
-          <h4 class="text-dark">Aqui presentamos a los integrantes de <span class="font-weight-bold text-dark">colored hat</span> un equipo selecto para la creacion de contenido web y desarrollo de software.</h4>
+          <h4 class="text-dark">Aqui presentamos a los integrantes de <span class="font-weight-bold text-dark">BatCode</span> un equipo selecto para la creacion de contenido web y desarrollo de software.</h4>
           <br>
           <div class="row">
             <!-- mienbros-->
@@ -555,7 +596,7 @@
                 <div class="col-lg-4">
                   <div class="mb-4">
                     <h6 class="font-weight-bold mb-0">Email de contacto</h6>
-                    <small class="text-grey">colored_hat@outlook.com</small>
+                    <small class="text-grey">batcodex2@gmail.com</small>
                   </div>
                 </div>
               </div>
@@ -623,12 +664,12 @@
           <div class="row">
             <div class="col-lg-6">
               <small class="font-weight-bold text-dark">© 2021 <a class="font-weight-bold text-dark"
-                  target="_blank">Colored Hat</a></small>
+                  target="_blank">BatCode</a></small>
             </div>
             <div class="col-lg-6 text-right">
               <small><a
                   href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información. "
-                  class="font-weight-bold text-dark">colored_hat@outlook.com</a>
+                  class="font-weight-bold text-dark">batcodex2@gmail.com</a>
             </div>
           </div>
         </div>
@@ -642,9 +683,10 @@
       <h1 class="display-3 text-light align-self-center">Hagamos tus ideas <span
           class="font-weight-bold">realidad</span>.</h1>
           <hr><hr>
-      <a class="stretched-link enlace-front"
-        href="mailto:colored_hat@outlook.com?subject=! Quiero mi idea hacerla realidad.&body=Hola, te contacto desde tu Website quiero mas información. ">colored_hat@outlook.com</a>
-
+      <a class="stretched-link enlace-front"></a>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Contántanos
+      </button>
     </div>
   </div>
   <!-- end  contenido de efecto -->
@@ -709,7 +751,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([-0.275215, -79.190547]).addTo(map)
-    .bindPopup('Bienvenidos a <br> Colored Hat.')
+    .bindPopup('Bienvenidos a <br> BatCode.')
     .openPopup()
     .bindTooltip('Te esperamos')
     .openTooltip();
